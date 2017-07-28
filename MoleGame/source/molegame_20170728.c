@@ -64,7 +64,7 @@ unsigned char check_caught_mole(unsigned int now_led)
     if(now_led == 0)
     {
         //해당 스위치가 눌리면
-	    if(~PIN_MOLE_SW0 & sw[now_led])
+        if(~PIN_MOLE_SW0 & sw[now_led])
             return CORRECT_SW;
         //해당 스위치가 아닌 다른 스위치가 눌리면
         else if(PIN_MOLE_SW_ELSE != 0xFF)
@@ -99,6 +99,7 @@ void led_random()
         led_status *= 2;
     now_led = i;
     PORT_LED = (~led_status << 4) | 0x0F;
+    //두더지 하나가 나타나고 포획 체킹하는 반복문
     for(i = 0; i < 1000; i++)
     {
         //눌린 스위치 판별
