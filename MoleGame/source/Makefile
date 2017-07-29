@@ -16,7 +16,7 @@ F_CPU:=16000000
 AVRDUDE_PROGRAMMER := avrisp2
 AVRDUDE_PORT := /dev/ttyUSB0
 
-TARGETNAME = molegame_20170728
+TARGETNAME = molegame_20170729
 SRC = $(TARGETNAME).c
 
 # Flags for the linker and the compiler
