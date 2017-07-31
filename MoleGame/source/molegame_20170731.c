@@ -53,6 +53,7 @@ ISR(TIMER0_OVF_vect)
     TCNT0 = 256 - (F_CPU / CLOCK_TICK / 64);
 }
 
+//INT6(Difficulty Increasing Button) ISR
 ISR(INT6_vect)
 {
     cli();
@@ -68,10 +69,9 @@ ISR(INT6_vect)
     PORT_LED &= ~0xF0;
     //display now difficulty
     fnd_display(DISPLAY_DIFFICULTY);
-    //Buzzer On
+    //Buzzer and Mole LED All On
     for(int i = 0; i < 250; i++)
     {
-
       PORT_BUZZER |= ((1 << PORT0) | 0x00);
       delay_ms(1);
       PORT_BUZZER &= ((0 << PORT0) | 0xFE);
@@ -310,6 +310,7 @@ void show_gameover()
     }
   }
 }
+
 int main(void)
 {
     unsigned char pressed_sw, now_led;
