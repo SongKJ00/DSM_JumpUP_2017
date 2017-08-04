@@ -1,1 +1,1 @@
-### JumpUP 캠프에서 진행한 프로젝트들을 관리하는 repository입니다.
+[![Watch the vidieo](https://github.com/SongKJ00/JumpUP/blob/master/MoleGame/video/testvideo_20170804.mp4)
